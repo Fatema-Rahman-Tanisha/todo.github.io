@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style type="text/tailwindcss">
+    @layer components  {
+     .widthSet{ @apply   w-[90%] md:w-[60%] lg:w-[50%] xl:w-[35%] }
+     .lightBg{background-image: url('./images/bg-desktop-light.jpg');}
+     .darkBg{background-image: url('./images/bg-desktop-dark.jpg');}
+    }
+  </style>
+  <title>Frontend Mentor | Todo app</title>
+</head>
+<body class="w-full h-full ">
+<header class="w-full h-[45vh] flex flex-col justify-end items-center gap-3 bg-cover bg-no-repeat lightBg" id="headerimg">
+  <div class="contentbox widthSet flex justify-between items-center h-[20%]">
+    <h1 class="uppercase text-3xl text-white tracking-widest font-semibold">todo</h1>
+    <img src="./images/icon-sun.svg" onclick="theme()" class="cursor-pointer" alt="">
+  </div>
+  <form id="todoform" style="font-family: 'Josefin Sans', sans-serif;" class="widthSet h-[20%] flex justify-center items-center">
+    <input id="input" class=" boxes w-full h-[70%] rounded outline-none border-none box-border px-6 text-gray-600" placeholder="Create a new todo" type="text" name="" id="">
+  </form>
+</header>
+<div class="main boxes w-full h-[55vh] flex justify-center items-start">
+  <div class="todos shadow-lg widthSet flex flex-col justify-center items-center pt-[1em] ">
+
+  </div>
+</div>
+<script src="./script.js"></script>
+</body>
+</html>
